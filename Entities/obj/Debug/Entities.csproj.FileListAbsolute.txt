@@ -1,0 +1,6 @@
+C:\Users\Vini\source\repos\AutoGlass\Entities\bin\Debug\Entities.dll
+C:\Users\Vini\source\repos\AutoGlass\Entities\bin\Debug\Entities.pdb
+C:\Users\Vini\source\repos\AutoGlass\Entities\obj\Debug\Entities.csproj.AssemblyReference.cache
+C:\Users\Vini\source\repos\AutoGlass\Entities\obj\Debug\Entities.csproj.CoreCompileInputs.cache
+C:\Users\Vini\source\repos\AutoGlass\Entities\obj\Debug\Entities.dll
+C:\Users\Vini\source\repos\AutoGlass\Entities\obj\Debug\Entities.pdb

@@ -1,0 +1,86 @@
+﻿@using Entities;
+@model TOProdutos
+
+
+
+@{
+
+    ViewData["Title"] = "CadastroProduto";
+
+}
+<script src="~/js/CadastroProduto.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.pt-BR.min.js"></script>
+
+
+<div style="margin: 0 auto; width: 100%;">
+    <div class="panel panel-default" style="width:25%; margin-left: 35%; position: relative">
+        <div class="panel-heading ui-draggable-handle">
+            <h2>Cadastrar/Alterar Produto</h2>
+        </div>
+        <div class="panel-body">
+            @using (Html.BeginForm("SalvarProduto", "Home", FormMethod.Post))
+            {
+                <div class="panel panel-default"   position: relative">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="block">
+                                <div class="form-group">
+                                    @Html.HiddenFor(model => model.IDProduto)
+                                    <label for="server_Marca">Descrição:</label>
+                                    @Html.TextBoxFor(model => model.Descricao, new { @id = "Descricao", @name = "Descricao", @class = "form-control", @maxlength = "150" })
+                                    <br />
+                              
+                                    <label for="server_Fabricacao">Fabricação:</label>
+                                    @Html.TextBoxFor(model => model.Fabricacao, new { @id = "Fabricacao", @name = "Fabricacao", @class = "form-control", @maxlength = "50" })
+                                    <br />
+                                    <label for="server_Validade">Validade:</label>
+                                    @Html.TextBoxFor(model => model.Validade, new { @id = "Validade", @name = "Validade", @class = "form-control",  @maxlength = "50" })
+                                    <br />
+                                    <label for="server_Marca">Código fornecedor:</label>
+                                    @Html.TextBoxFor(model => model.CodFornecedor, new { @id = "CodFornecedor", @name = "CodFornecedor", @class = "form-control", @maxlength = "150" })
+                                    <br />
+                                    <label for="server_Marca">Descrição fornecedor:</label>
+                                    @Html.TextBoxFor(model => model.DescFornecedor, new { @id = "DescFornecedor", @name = "DescFornecedor", @class = "form-control", @maxlength = "150" })
+                                    <br />
+                                    <label for="server_Marca">CNPJ fornecedor:</label>
+                                    @Html.TextBoxFor(model => model.CNPJ, new { @id = "CNPJ", @name = "CNPJ", @class = "form-control", @maxlength = "150" })
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <a id="btnVoltar" href="@Url.Action("Index", "Home")" class="btn btn-primary pull-left">
+                                Voltar
+                            </a>
+                            <button type="submit" onclick="return Validar()" class="btn btn-success pull-right">Salvar</button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $("#Fabricacao").datepicker({
+        format: "dd/mm/yyyy",
+        language: "pt-BR"
+    });
+
+    $("#Validade").datepicker({
+        format: "dd/mm/yyyy",
+        language: "pt-BR"
+    });
+
+
+</script>
+

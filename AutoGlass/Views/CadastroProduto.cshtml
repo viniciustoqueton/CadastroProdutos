@@ -1,0 +1,77 @@
+﻿
+@using AutoGlass.Models
+@model ProdutosViewModel
+@{
+
+    ViewData["Title"] = "CadastroProduto";
+
+}
+
+
+
+<div style="margin: 0 auto; width: 100%;">
+    <div class="panel panel-default">
+        <div class="panel-heading ui-draggable-handle">
+            <h2>Cadastrar/Alterar Produto</h2>
+        </div>
+        <div class="panel-body">
+            @using (Html.BeginForm("SalvarProduto", "Home", FormMethod.Post))
+            {
+                <div class="panel panel-default" style="width:25%; margin-left: 35%; position: relative">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="block">
+                                <div class="form-group" style="margin-top: 15px">
+
+                                    <label for="server_Marca">Descrição:</label>
+                                    @Html.TextBoxFor(model => model.Produtos.Descricao, new { @id = "Descricao", @name = "Descricao", @class = "form-control", @maxlength = "150" })
+                                    <br />
+                                    <label for="server_Situacao">Situação : </label>
+                                    @Html.TextBoxFor(model => model.Produtos.Situacao, new { @id = "Situacao", @name = "Situacao" })
+                                    <br />
+                                    <label for="server_Modelo">Fabricacao:</label>
+                                    @Html.TextBoxFor(model => model.Produtos.Fabricacao, new { @id = "Fabricacao", @name = "Fabricacao", @class = "form-control", @maxlength = "50" })
+                                    <br />
+                                    <label for="server_Usuario">Validade:</label>
+                                    @Html.TextBoxFor(model => model.Produtos.Validade, new { @id = "Validade", @name = "Validade", @class = "form-control", @style = "width:50%", @maxlength = "50" })
+                                    <br />
+                                    <label for="server_Marca">Código fornecedor:</label>
+                                    @Html.TextBoxFor(model => model.Produtos.CodFornecedor, new { @id = "CodFornecedor", @name = "CodFornecedor", @class = "form-control", @maxlength = "150" })
+                                    <br />
+                                    <label for="server_Marca">Descrição fornecedor:</label>
+                                    @Html.TextBoxFor(model => model.Produtos.DescFornecedor, new { @id = "DescFornecedor", @name = "DescFornecedor", @class = "form-control", @maxlength = "150" })
+                                    <br />
+                                    <label for="server_Marca">CNPJ fornecedor:</label>
+                                    @Html.TextBoxFor(model => model.Produtos.CNPJ, new { @id = "CNPJ", @name = "CNPJ", @class = "form-control", @maxlength = "150" })
+                                    <br />
+                                    <br />
+                                    <br />
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <a id="btnVoltar" href="@Url.Action("Index", "Home")" class="btn btn-primary pull-left">
+                                Voltar
+                            </a>
+                            <button type="submit" onclick="return Validar()" class="btn btn-success pull-right">Salvar</button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+@*//<script>*@
+ @*     //    function Validar() {
+
+      //        if (!$('#Marca').val() == '' && !$('#Modelo').val() == '') {
+      //            return true;
+      //        }
+      //        ShowMessage("Ops! Faltam inserir dados!", "warning", 5000);
+      //        return false;
+      //    }
+      //</script>*@

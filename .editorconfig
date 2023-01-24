@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# CS0006: Metadata file 'C:\Users\Vini\source\repos\AutoGlass\BLL\bin\Debug\netcoreapp3.1\BLL.dll' could not be found
+dotnet_diagnostic.CS0006.severity = error

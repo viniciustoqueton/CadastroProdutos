@@ -1,0 +1,97 @@
+﻿@using AutoGlass.Models
+@model ProdutosViewModel
+
+@{
+    ViewData["Title"] = "RecuperarProduto";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Page = "RecuperarProduto";
+
+}
+
+
+<div ">
+    <div class="panel panel-default">
+        <div class="panel-heading ui-draggable-handle">
+        
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="block">
+
+                    @using (Html.BeginForm("AtivaProduto", "Home", FormMethod.Post))
+                    {
+                        <div class="panel panel-default"  position: relative">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="block">
+                                        <div class="form-group" style="margin-top: 15px">
+                                           
+                                        <label for="server_NomeUsuario">Código Produto:</label>
+                                        @Html.TextBoxFor(model => model.Produtos.IDProduto, new { @id = "IDProduto", @name = "IDProduto", @class = "form-control", @maxlength = "150" })
+                                         <br />
+                                        <button type="submit" class="btn btn-danger">Ativar</button>
+                                     
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="form-group text-center">
+                    <h3>Produtos Inativos</h3>
+                    <br />
+                    <table class="table table-striped " id="tabelaConsultarLogVersao">
+                        <thead>
+                        <th class="text-left">Código Produto</th>
+                        <th class="text-left">Descricao</th>
+                        <th class="text-left">Situacao</th>
+                        <th class="text-left">Fabricacao</th>
+                        <th class="text-left">Validade</th>
+                        <th class="text-left">CodFornecedor</th>
+                        <th class="text-left">DescFornecedor</th>
+                        <th class="text-left">CNPJ</th>
+                        <th class="text-left">Recuperar</th>
+                        
+                        </thead>
+                        <tbody>
+                            @{
+                                foreach (var produtos in Model.ListaProdutos)
+                                {
+                                    <tr>
+                                        <td class="text-left">@produtos.IDProduto</td>
+                                        <td class="text-left">@produtos.Descricao</td>
+                                        <td class="text-left">@produtos.Situacao</td>
+                                        <td class="text-left">@produtos.Fabricacao</td>
+                                        <td class="text-left">@produtos.Validade</td>
+                                        <td class="text-left">@produtos.CodFornecedor</td>
+                                        <td class="text-left">@produtos.DescFornecedor</td>
+                                        <td class="text-left">@produtos.CNPJ</td>
+
+
+                                        <td class="text-left">
+                                            <a href="@Url.Action("AtivaProduto", "Home", new {IDProduto = produtos.IDProduto,})" class="btn btn-danger">
+                                                <i  class="fa fa-pencil-square"  aria-hidden="true"></i>
+                                                Ativar
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

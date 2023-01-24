@@ -1,0 +1,99 @@
+﻿@using AutoGlass.Models
+@model ProdutosViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Page = "Produtos";
+
+}
+
+
+<div ">
+    <div class="panel panel-default">
+        <div class="panel-heading ui-draggable-handle">
+        
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="block">
+                    <div class="form-group" >
+                        <a href="@Url.Action("CadastroProduto", "Home", new { IdPatrimonio = 0 })" class="btn btn-info pull-center">
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                            Novo Produto
+                        </a>
+                    </div>            
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="form-group text-center">
+                    <h3>Produtos Cadastrados</h3>
+                    <br />
+                    <table class="table table-striped " id="tabelaConsultarLogVersao">
+                        <thead>
+                        <th class="text-left">Código Produto</th>
+                        <th class="text-left">Descricao</th>
+                        <th class="text-left">Situacao</th>
+                        <th class="text-left">Fabricacao</th>
+                        <th class="text-left">Validade</th>
+                        <th class="text-left">CodFornecedor</th>
+                        <th class="text-left">DescFornecedor</th>
+                        <th class="text-left">CNPJ</th>
+                        <th class="text-left">Editar</th>
+                        <th class="text-left">Remover</th>
+                        </thead>
+                        <tbody>
+                            @{
+                                foreach (var produtos in Model.ListaProdutos)
+                                {
+                                    <tr>
+                                        <td class="text-left">@produtos.IDProduto</td>
+                                        <td class="text-left">@produtos.Descricao</td>
+                                        <td class="text-left">@produtos.Situacao</td>
+                                        <td class="text-left">@produtos.Fabricacao</td>
+                                        <td class="text-left">@produtos.Validade</td>
+                                        <td class="text-left">@produtos.CodFornecedor</td>
+                                        <td class="text-left">@produtos.DescFornecedor</td>
+                                        <td class="text-left">@produtos.CNPJ</td>
+
+                                        <td class="text-left">
+                                            <a href="@Url.Action("CadastroProduto", new { IDProduto = produtos.IDProduto })" onclick="Data()" class="btn btn-info">
+                                                <i class="fa fa-pencil-square" aria-hidden="true"></i>
+                                                Alterar
+                                            </a>
+                                        </td>
+                                        <td class="text-left">
+                                            <a href="@Url.Action("RemoverProduto", "Home", new {IDProduto = produtos.IDProduto,})" class="btn btn-danger" onclick="return Validar()">
+                                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                                Remover
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    $("#produtos.Fabricacao").datepicker({
+        format: "dd/mm/yyyy",
+        language: "pt-BR"
+    });
+
+    $("produtos.Fabricacao").datepicker({
+        format: "dd/mm/yyyy",
+        language: "pt-BR"
+    });
+
+
+</script>

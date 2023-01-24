@@ -1,0 +1,9 @@
+C:\Users\Vini\source\repos\AutoGlass\Infra\bin\Debug\Infra.dll
+C:\Users\Vini\source\repos\AutoGlass\Infra\bin\Debug\Infra.pdb
+C:\Users\Vini\source\repos\AutoGlass\Infra\bin\Debug\Entities.dll
+C:\Users\Vini\source\repos\AutoGlass\Infra\bin\Debug\Entities.pdb
+C:\Users\Vini\source\repos\AutoGlass\Infra\obj\Debug\Infra.csproj.AssemblyReference.cache
+C:\Users\Vini\source\repos\AutoGlass\Infra\obj\Debug\Infra.csproj.CoreCompileInputs.cache
+C:\Users\Vini\source\repos\AutoGlass\Infra\obj\Debug\Infra.csproj.CopyComplete
+C:\Users\Vini\source\repos\AutoGlass\Infra\obj\Debug\Infra.dll
+C:\Users\Vini\source\repos\AutoGlass\Infra\obj\Debug\Infra.pdb

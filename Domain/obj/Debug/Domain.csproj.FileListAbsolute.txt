@@ -1,0 +1,11 @@
+C:\Users\Vini\source\repos\AutoGlass\Domain\bin\Debug\Domain.dll
+C:\Users\Vini\source\repos\AutoGlass\Domain\bin\Debug\Domain.pdb
+C:\Users\Vini\source\repos\AutoGlass\Domain\bin\Debug\Entities.dll
+C:\Users\Vini\source\repos\AutoGlass\Domain\bin\Debug\Infra.dll
+C:\Users\Vini\source\repos\AutoGlass\Domain\bin\Debug\Entities.pdb
+C:\Users\Vini\source\repos\AutoGlass\Domain\bin\Debug\Infra.pdb
+C:\Users\Vini\source\repos\AutoGlass\Domain\obj\Debug\Domain.csproj.AssemblyReference.cache
+C:\Users\Vini\source\repos\AutoGlass\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+C:\Users\Vini\source\repos\AutoGlass\Domain\obj\Debug\Domain.csproj.CopyComplete
+C:\Users\Vini\source\repos\AutoGlass\Domain\obj\Debug\Domain.dll
+C:\Users\Vini\source\repos\AutoGlass\Domain\obj\Debug\Domain.pdb
